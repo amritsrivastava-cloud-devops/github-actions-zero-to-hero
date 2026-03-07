@@ -1,6 +1,6 @@
 ---
 #this is workflow name 
-name: Hello workflow
+name: Hello Amrit
 
 #runs on the trigger
 on:
