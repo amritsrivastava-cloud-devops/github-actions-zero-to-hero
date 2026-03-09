@@ -2,7 +2,7 @@
 #this is workflow name 
 name: Hello Amrit
 
-#runs on the trigger
+#runs on automatic trigger whenever change is pushed to branch (deployment)
 on:
   push:
     branches: [ main ]
