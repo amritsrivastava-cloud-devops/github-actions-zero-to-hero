@@ -9,9 +9,17 @@ jobs:
   greet:
     runs-on: ubuntu-latest
     steps:
+      - name: time and date
+        run: date
+      - name: Print the branch name using an environment variable
+        run: echo "The branch that triggered this run is $GITHUB_REF_NAME"
+      - name: list file in repo
+        run: ls -la
       - name: checkout code
         uses: actions/checkout@v4
       - name: greeting
         run: echo "Hello from Github Actions"
+      - name: runner os 
+        run: echo "runner os is $RUNNER_OS"
   
    
