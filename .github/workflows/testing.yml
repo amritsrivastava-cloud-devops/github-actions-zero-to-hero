@@ -2,7 +2,8 @@ name: CODEPUSH
 
 on:
   push:
-    - main
+    branches:
+      - main
 
 jobs:
 
