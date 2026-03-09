@@ -1,0 +1,31 @@
+#deploy own portfolio website for free using github action and gitops cicd
+name: Portfolio
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+    pages: write
+    id-token: write
+    
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # get access to your portfolio code via pre-built actions
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        
+      # setup github pages
+      - name: Setup Github Pages
+        uses: actions/configure-pages@v4
+
+      # setup code artifacts
+      - name: Upload static files
+        uses: actions/upload-pages-artifact@v4
+
+      - name: Deploy to Github pages
+        uses: actions/deploy-pages@v4
+        
