@@ -9,6 +9,8 @@ jobs:
   greet:
     runs-on: ubuntu-latest
     steps:
+      - name: current python version
+        run: python--version
       - name: time and date
         run: date
       - name: Print the branch name using an environment variable
