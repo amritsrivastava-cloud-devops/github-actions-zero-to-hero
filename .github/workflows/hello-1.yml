@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout code
-        run: actions/checkout
+        run: actions/checkout@v4
       - name: greeting
         run: echo "Hello from Github Actions"
   
