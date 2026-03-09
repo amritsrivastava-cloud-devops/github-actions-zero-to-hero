@@ -4,7 +4,8 @@ name: CICD
 on:
   workflow_dispatch:
      inputs:
-       environments: This is the environment value where this workflow runs
+       environments:
+          description: This is the env vlaue where this workflow runs
           default: 'dev'
           required: true
           type: choice
