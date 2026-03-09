@@ -1,6 +1,6 @@
 # ⚙️ GitHub Actions
 
-A collection of GitHub Actions workflows and automation configurations for streamlining CI/CD pipelines, building , testing, deployment, and more.
+A collection of GitHub Actions workflows and automation configurations for streamlining CI/CD pipelines, building , testing, deployment .
 
 ---
 
