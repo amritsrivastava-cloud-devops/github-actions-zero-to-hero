@@ -4,9 +4,12 @@ name: Hello Amrit
 
 #runs on automatic trigger whenever change is pushed to branch (deployment)
 on:
-  workflow_dispatch: 
-  #push:
- #   branches: [ main ]
+  #workflow_dispatch: 
+  push:
+    branches: [ main ]
+
+    paths:
+      - '**.html'
       
 #these are jobs inside workflows 
 jobs:
