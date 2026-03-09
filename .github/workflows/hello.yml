@@ -5,8 +5,7 @@ name: Hello Amrit
 #runs on the trigger
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
       
 #these are jobs inside workflows 
 jobs:
