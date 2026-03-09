@@ -32,6 +32,8 @@ jobs:
       # STEP 3
       - name: Upload static files
         uses: actions/upload-pages-artifact@v4
+        with:
+          path: "."
         
       # make page live
       # STEP 4
