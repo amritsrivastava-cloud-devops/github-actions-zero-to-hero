@@ -16,6 +16,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: installation of packages
-        run: sudo apt install httpd
+        run: sudo apt install apache2
 
         
