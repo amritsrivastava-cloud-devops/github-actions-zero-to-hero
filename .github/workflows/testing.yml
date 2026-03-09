@@ -1,0 +1,21 @@
+name: CODEPUSH
+
+on:
+  push:
+    - main
+
+jobs:
+
+  version-showing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: version of the python and docker
+        run: docker --version && python --version
+
+  https-installation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: installation of packages
+        run: sudo apt install httpd
+
+        
