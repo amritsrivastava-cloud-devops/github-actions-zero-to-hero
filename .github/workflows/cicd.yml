@@ -2,7 +2,8 @@
 name: CICD
 # Manual click deliver workflow whenever user needs 
 on:
-  workflow_dispatch: null
+  workflow_dispatch:
+  
 jobs:
 
   code:
