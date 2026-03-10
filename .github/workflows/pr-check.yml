@@ -2,8 +2,8 @@ name: PR-CHECK
 
 on:
   pull_request: 
-    branches: [main]
-    type: [open, synchronize]
+    branches: [ main ]
+    type: [opened, synchronize]
 
 jobs:
   pr-check:
