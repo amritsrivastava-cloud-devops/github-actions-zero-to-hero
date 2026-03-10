@@ -14,4 +14,4 @@ jobs:
 
     steps:
       - name: Print environment 
-        run: echo "Running deployment for environment: ${{ github.event.inputs.environment }}"
+        run: echo "Running deployment for environment"
