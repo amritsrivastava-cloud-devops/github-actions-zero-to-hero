@@ -12,3 +12,5 @@ jobs:
     steps:
       - name: Print PR branch
         run: echo "PR check running for branch "
+      - name: pr check running
+        run: echo "done"
