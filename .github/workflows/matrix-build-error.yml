@@ -1,4 +1,4 @@
-name: Matrix Exclude FailFast Test
+name: Matrix Exclude FailFast
 
 on:
   push:
@@ -14,9 +14,12 @@ jobs:
       matrix:
         os: [ubuntu-latest, windows-latest]
         python-version: ["3.10", "3.11", "3.12"]
+        exclude:
+          - os: windows-latest
+            python-version: "3.10"
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Setup Python
@@ -26,7 +29,3 @@ jobs:
 
       - name: Print Python Version
         run: python --version
-
-      - name: Fail only on Windows Python 3.10
-        if: matrix.os == 'windows-latest' && matrix.python-version == '3.10'
-        run: exit 1
