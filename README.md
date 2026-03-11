@@ -4,6 +4,27 @@ A collection of GitHub Actions workflows and automation configurations for strea
 
 ---
 
+## Topics to cover 
+
+- Fundamentals
+  - YAML SYNTAX
+  - How to create workflows, jobs , steps
+  - Triggers
+  - Github Pages
+
+- Advanced
+  - Matrix Strategy
+  - Docker Build and Push (CI)
+  - Self hosted runners
+  - Continuous Deployment (CD)
+ 
+- DevSecOps
+  - Devops
+  - Security
+  - Automation
+
+---
+
 ## 📁 Repository Structure
 
 ```
