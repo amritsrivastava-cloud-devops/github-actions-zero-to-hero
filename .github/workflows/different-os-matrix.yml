@@ -1,0 +1,38 @@
+name: Different-OS
+
+on:
+ workflow_dispatch:
+
+jobs:
+  TEST1LINUX:
+    runs-on: ubuntu-latest
+    steps:
+      - name: os name 
+        run: uname -a
+      - name: runner hostname
+        run: hostname
+      - name: current user
+        run: whoami
+
+  TEST2WINDOWS:
+    runs-on: windows-latest
+    steps:
+      - name: os name 
+        run: systeminfo | findstr /B /C:"OS Name"
+      - name: runner hostname
+        run: hostname
+      - name: current user
+        run: whoami
+
+  TEST3MACOS:
+    runs-on: macos-latest
+    steps:
+      - name: os name
+        run: sw_vers
+      - name: runner hostname
+        run: hostname
+      - name: current user
+        run: whoami
+
+
+  
