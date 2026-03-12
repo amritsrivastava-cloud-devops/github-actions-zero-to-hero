@@ -13,7 +13,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
+      - name: set up docker compose continue-on-error: 
+        uses: docker/setup-compose-action@v2
       - name: deploy with docker compose
-        run: docker-compose up -d --build
+        run: docker-compose down && docker compose up -d --build --force-recreate
       
