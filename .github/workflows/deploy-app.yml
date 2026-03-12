@@ -19,6 +19,7 @@ jobs:
 
             - name: Set up Docker Compose (optional, usually pre-installed on ubuntu-latest runners)
               uses: docker/setup-compose-action@v2 
-
+            - name: Wait for DockerHub
+              run: sleep 20
             - name: deploy with docker compose
               run: docker compose down && docker compose up -d --build --force-recreate --pull always
