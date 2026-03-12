@@ -13,6 +13,14 @@ jobs:
         run: hostname
       - name: current user
         run: whoami
+      - name: docker vesion
+        run: docker --version
+      - name: python version
+        run: python --version
+      - name: node version check
+        run: node --version
+      - name: git version check
+        run: git --version
 
   TEST2WINDOWS:
     runs-on: windows-latest
