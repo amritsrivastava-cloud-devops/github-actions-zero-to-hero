@@ -17,7 +17,11 @@ Eg - Linter(flake) , {Bandit(SAST tool)- sql injection , code smells}
 Build stage - 
 
 Dockerfile -> hadolint
-Image -> Trivy
+
+Image ->
+
+Trivy (Has database: - cves, suppose if python3.11 has vul , trivy scan and rate 
+as critical, high , medium , low)
 
 Test Stage -
 
