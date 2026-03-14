@@ -9,16 +9,14 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0 # needed for actions that require full history
+      - name: Lint step
+        run: echo "Running lint checks"
 
   test:
     runs-on: ubuntu-latest
     steps:
       - name: Test step
-        run: echo "Running Tests"
+        run: echo "Running tests"
 
   summary:
     runs-on: ubuntu-latest
