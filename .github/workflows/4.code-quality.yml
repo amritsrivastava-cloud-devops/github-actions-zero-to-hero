@@ -1,0 +1,4 @@
+name: Code Quality
+
+# Linting and SAST scan 
+# lint - flake8 and sast - bandit 
