@@ -22,7 +22,8 @@ jobs:
           key: ${{ secrets.EC2_SSH_PRIVATE_KEY }}
           script: |
            echo "starting deploymet"
-           mkdir devops-dep1
+           rm -rf ~/devops-dep1
+           mkdir ~/devops-dep1
 
           
       - name: copy the docker -compose file
