@@ -1,0 +1,3 @@
+#SCAN THE DOCKER FILE FOR ISSUE AND CVEs
+
+name: Docker Lint
