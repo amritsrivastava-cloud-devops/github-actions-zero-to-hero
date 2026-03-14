@@ -26,10 +26,20 @@ as critical, high , medium , low)
 Test Stage -
 
 DAST - dynamic appication security testing 
-OWASP -top 10 ( open web application security project )
+OWASP -top 10 ( open web application security project ) log4j (java lib)
 
 
 
 Shift left - Do all your security practice at every staage . 
 
- 
+CI (continuous Integration)
+
+- Code Lint and DAST
+- Docker Lint
+- Gitleaks (Dependencies check)
+- Build and Push
+- Image Scan (trivy)
+
+CD (Continuous Deployment)
+- Deploy your app
+- On a Server (we need a server)
