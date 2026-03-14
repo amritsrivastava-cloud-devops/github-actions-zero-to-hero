@@ -2,20 +2,21 @@ name: Smart Pipeline
 
 on:
   push:
-    branches: ["**"]
+    branches:
+      - "**"
 
 jobs:
 
   lint:
     runs-on: ubuntu-latest
     steps:
-      - name: Lint step
+      - name: Run lint
         run: echo "Running lint checks"
 
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Test step
+      - name: Run tests
         run: echo "Running tests"
 
   summary:
@@ -23,13 +24,13 @@ jobs:
     needs: [lint, test]
 
     steps:
-      - name: Branch Type
+      - name: Check branch type
         run: |
           if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
-            echo "Main branch push"
+            echo "This is a MAIN branch push"
           else
-            echo "Feature branch push"
+            echo "This is a FEATURE branch push"
           fi
 
-      - name: Print Commit Message
-        run: echo "Commit Message: ${{ github.event.head_commit.message }}"
+      - name: Print commit message
+        run: echo "Commit message: ${{ github.event.head_commit.message }}"
