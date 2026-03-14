@@ -1,0 +1,37 @@
+name: Smart Pipeline
+
+on:
+  push:
+    branches: ["**"]
+
+jobs:
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # needed for actions that require full history
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test step
+        run: echo "Running Tests"
+
+  summary:
+    runs-on: ubuntu-latest
+    needs: [lint, test]
+
+    steps:
+      - name: Branch Type
+        run: |
+          if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
+            echo "Main branch push"
+          else
+            echo "Feature branch push"
+          fi
+
+      - name: Print Commit Message
+        run: echo "Commit Message: ${{ github.event.head_commit.message }}"
