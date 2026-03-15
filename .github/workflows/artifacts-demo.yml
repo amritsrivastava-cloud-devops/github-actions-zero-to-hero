@@ -1,0 +1,34 @@
+name: artifacts-demo
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Create report file
+        run: |
+          echo "ci test report" > report.txt
+          echo "build sucecessful" >> report.txt
+
+      - name: upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-report
+          path: report.txt
+
+  consume:
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: test-report
+
+      - name: print artifact content
+        run: cat report.txt
+    
